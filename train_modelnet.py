@@ -53,6 +53,10 @@ def train():
 
     train_ds = load_dataset(config['train_ds'], config['batch_size'])
     val_ds = load_dataset(config['val_ds'], config['batch_size'])
+    print('------------------dataset detail--------------------')
+    print('>>train_ds', train_ds)
+    print('>>val_ds', val_ds)
+
 
     callbacks = [
         keras.callbacks.EarlyStopping(
