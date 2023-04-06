@@ -128,7 +128,7 @@ class SelectionSortGpuOp : public OpKernel {
             auto dist_flat = dist_tensor.flat<float>();
             const float *dist = &(dist_flat(0));
             auto outi_flat = outi_tensor->flat<int>();
-            int *outi = &(outi_flat(0));
+            int *outi = &(outi_flat(0)); 
             auto out_flat = out_tensor->flat<float>();
             float *out = &(out_flat(0));
             selectionSortLauncher(b,n,m,k_,dist,outi,out);
