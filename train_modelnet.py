@@ -77,6 +77,7 @@ def train():
         validation_data = val_ds,
         validation_steps = 10,
         validation_freq = 1,
+        callbacks = callbacks,
         epochs = 100,
         verbose = 1
     )
