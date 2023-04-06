@@ -57,6 +57,9 @@ class PointConvModel(keras.Model):
         self.dropout2 = keras.layers.Dropout(0.4)
 
         self.dense3 = keras.layers.Dense(self.num_classes, activation=tf.nn.softmax)
+        
+        #TODO
+        self._set_inputs(tf.TensorSpec([None, 8192, 3], tf.float32, name='inputs')
 
 
     def forward_pass(self, input, training):
